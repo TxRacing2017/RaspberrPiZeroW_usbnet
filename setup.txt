@@ -1,0 +1,34 @@
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo git config --global user.email "hoge@example.com"
+sudo git config --global user.name "hoge"
+
+sudo apt-get install -y nodejs npm
+sudo npm cache clean
+sudo npm install npm n -g
+sudo n lts
+
+sudo apt-get install build-essential python-rpi.gpio
+#curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered
+
+update-nodejs-and-nodered
+
+sudo systemctl enable nodered.service
+
+cd ~/.node-red
+npm install node-red-contrib-gpio
+npm install node-red-dashboard
+npm install wiring-pi
+
+sudo apt-get install pimoroni
+
+curl -sS https://get.pimoroni.com/speakerphat | bash 
+
+git clone https://github.com/pimoroni/enviro-phat.git
+git clone https://github.com/pimoroni/explorer-hat.git
+git clone https://github.com/pimoroni/scroll-phat.git
+git clone https://github.com/pimoroni/scroll-phat-hd.git
+git clone https://github.com/pimoroni/fourletter-phat.git
+git clone https://github.com/pimoroni/touch-phat.git
+
